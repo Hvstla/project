@@ -57,11 +57,16 @@ public class Task1  {
 
     public static double percentile(ArrayList<Integer> arrayList, double percentile) {
 
-        float index = (float) percentile / 100 * (arrayList.size() - 1) + 1 ;
+        double index = percentile / 100D * (arrayList.size() - 1) + 1 ;
+
         int n = (int)index;
 
-       return (float) arrayList.get(n - 1) + (index - n) * ((arrayList.get(n)) - arrayList.get(n - 1));
+       return arrayList.get(n - 1) + (index - n) * ((arrayList.get(n)) - arrayList.get(n - 1));
+
+
     }
+
+
 
 
 }
